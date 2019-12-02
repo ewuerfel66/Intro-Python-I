@@ -13,9 +13,19 @@ y = "7"
 
 # Write a print statement that combines x + y into the integer value 12
 
-# YOUR CODE HERE
+# Convert str to int
+y_int = int(y)
+
+# Perform arithmetic
+my_sum = x + y_int
+print("The sum of {} and {} is: {}".format(x, y_int, my_sum))
 
 
 # Write a print statement that combines x + y into the string value 57
 
-# YOUR CODE HERE
+# Convert int to str
+x_str = str(x)
+
+# concat strings
+my_str = x_str + y
+print("{} and {} concatenated is: {}".format(x_str, y, my_str))
