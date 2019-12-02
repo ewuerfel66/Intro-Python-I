@@ -1,4 +1,5 @@
 # Intro to Python I
+## Eric Wuerfel
 
 It's time to learn a new language! Python!
 
