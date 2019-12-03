@@ -22,3 +22,30 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# Get vars from the command line if there are any
+try:
+  month = sys.argv[1]
+  year = sys.argv[2][1:-1]
+except IndexError:
+  try:
+    month = sys.argv[1]
+    year = datetime.now().year
+  except IndexError:
+    month = datetime.now().month
+    year = datetime.now().year
+except ValueError:
+  print("Program expects input in the form of: `14_cal.py month [year]`")
+  sys.exit(0)
+
+# Convert to integers if not already
+if not isinstance(month, int):
+  month = int(month)
+
+if not isinstance(year, int):
+  year = int(year)
+
+cal = calendar.TextCalendar().formatmonth(year, month)
+print(cal)
+
+sys.exit(0)
